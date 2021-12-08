@@ -55,6 +55,17 @@ struct MaxAndMinText: View {
     }
 }
 
+struct SearchText: View {
+    var text: String
+    
+    var body: some View {
+        Text(String(text))
+            .kerning(-0.2)
+            .foregroundColor(Color("TextColor"))
+            .font(.title)
+    }
+}
+
 struct TextViews_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
@@ -63,7 +74,9 @@ struct TextViews_Previews: PreviewProvider {
                 CityText(text: "Kitchener")
                 WeatherStateText(text: "Cluding")
                 MaxAndMinText(text:"Max: 3°")
+                SearchText(text: "Enter the city name:")
             }
+            
         }.background(Color("BackgroundContainer"))
         
     }

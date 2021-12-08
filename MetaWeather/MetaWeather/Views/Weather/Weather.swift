@@ -30,6 +30,6 @@ struct Weather: View {
 
 struct Weather_Previews: PreviewProvider {
     static var previews: some View {
-        Weather(city: "London", currentDegree: "2", weather: "Claud", max: "4", min: "1")
+        Weather(city: "London", currentDegree: "2", weather: "Claud", max: "4", min: "1").background(.blue)
     }
 }

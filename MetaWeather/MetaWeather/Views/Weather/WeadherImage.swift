@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContainerWeadherImage: View {
+struct WeadherImage: View {
     var image: UIImage
     
     var body: some View {
@@ -20,6 +20,6 @@ struct ContainerWeadherImage: View {
 
 struct ContainerWeadherImage_Previews: PreviewProvider {
     static var previews: some View {
-        ContainerWeadherImage(image: UIImage())
+        WeadherImage(image: UIImage())
     }
 }
