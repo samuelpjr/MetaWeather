@@ -11,6 +11,9 @@ struct ContainerSearchView: View {
     var body: some View {
         VStack {
             SearchView(cityName: "")
+                .padding([.top], 150)
+                .padding([.trailing], 20)
+                
             Spacer()
         }
     }

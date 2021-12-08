@@ -11,10 +11,10 @@ struct Search: View {
     @Binding var cityName: String
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 5) {
+        VStack(alignment: .leading) {
             SearchText(text: "Enter the city name:")
                 .multilineTextAlignment(.leading)
-                .padding(.leading)
+                
                 
             TextField("City Name", text: $cityName)
                 .frame(height: 40)
@@ -22,7 +22,6 @@ struct Search: View {
                 .cornerRadius(5)
                 .opacity(1.0)
                 .foregroundColor(.black)
-                .padding([.leading, .trailing])
             
         }
     }

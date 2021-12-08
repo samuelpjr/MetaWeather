@@ -16,10 +16,7 @@ struct SearchView: View {
     
     var body: some View {
         VStack {
-            Search(cityName: $cityName)
-                .padding([.trailing], 20)
-                .padding([.top], 150)
-            
+            Search(cityName: $cityName).padding()
             AsyncButton(isComplete: complete, inProgress: $inProgress, action: {
                 self.fetchData()
             }) {
@@ -40,8 +37,6 @@ struct SearchView: View {
                 ErrorView()
             }
         }
-
-        Spacer()
     }
     
     func fetchData() {
