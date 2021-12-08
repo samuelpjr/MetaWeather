@@ -53,7 +53,7 @@ class WeatherViewModel: ObservableObject {
                         continuation.resume(returning: false)
                         return
                     }
-                    let _ = await featchLargeImage(with: Path.largeImageIcon(abreviation: abreviation).url)
+                    let _ = await fetchLargeImage(with: Path.largeImageIcon(abreviation: abreviation).url)
                     continuation.resume(returning: true)
                     
                 } catch {
@@ -65,7 +65,7 @@ class WeatherViewModel: ObservableObject {
     }
     
     @MainActor
-    private  func featchLargeImage(with urlPath: String) async -> Bool {
+    private  func fetchLargeImage(with urlPath: String) async -> Bool {
         return await withCheckedContinuation { continuation in
             Task {
                 do {
